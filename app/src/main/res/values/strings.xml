@@ -2,8 +2,11 @@
     <string name="app_name">Aplikasi Hitung Bangun Ruang</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="repeat_password">Ulangi password</string>
+    <string name="back">Kembali</string>
     <string name="login">Login</string>
     <string name="login_description">Silahkan isi username dan password Anda</string>
     <string name="register">Register</string>
-    <string name="register_description">Belum memiliki akun?</string>
+    <string name="register_description">Silahkan isi profil akun Anda</string>
+    <string name="register_question">Belum memiliki akun?</string>
 </resources>
