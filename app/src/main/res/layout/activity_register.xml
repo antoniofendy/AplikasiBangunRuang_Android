@@ -9,18 +9,32 @@
     android:padding="16dp"
     tools:context=".RegisterActivity">
 
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.017"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/previous"
+            android:onClick="toLogin"/>
+
         <ImageView
             android:id="@+id/image_view"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.02"
+            app:layout_constraintTop_toBottomOf="@+id/button_back"
             android:src="@drawable/img_app"/>
 
         <TextView
@@ -131,18 +145,18 @@
             android:text="@string/register"
             android:onClick="register"/>
 
-        <Button
-            android:id="@+id/button_back"
-            android:background="@drawable/custom_button"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_login"
-            android:text="@string/back"
-            android:onClick="toLogin"/>
+<!--        <Button-->
+<!--            android:id="@+id/button_back"-->
+<!--            android:background="@drawable/custom_button"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginBottom="30dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/button_login"-->
+<!--            android:text="@string/back"-->
+<!--            android:onClick="toLogin"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
