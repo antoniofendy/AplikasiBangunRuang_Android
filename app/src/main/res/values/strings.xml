@@ -13,7 +13,14 @@
     <string name="menu_description">Silahkan pilih bangun ruang</string>
     <string name="logout">Logout</string>
     <string name="help">Help</string>
+    <string name="input">Input</string>
+    <string name="result">Hasil</string>
+    <string name="calculate">Hitung</string>
+    <string name="delete">Hapus</string>
     <string name="kubus">Kubus</string>
     <string name="kerucut">Kerucut</string>
     <string name="balok">Balok</string>
+    <string name="surface">Luas permukaan</string>
+    <string name="volume">Volume</string>
+    <string name="kubus_input_sisi">Nilai sisi a</string>
 </resources>

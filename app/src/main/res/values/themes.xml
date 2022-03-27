@@ -18,4 +18,8 @@
 <!--        <item name="windowNoTitle">true</item>-->
     </style>
 
+    <style name="CustomCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/light_grey</item>
+    </style>
+
 </resources>

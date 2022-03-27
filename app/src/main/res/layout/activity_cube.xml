@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_wave"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".CubeActivity">
 
@@ -30,125 +30,197 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <TextView
-        android:id="@+id/textview_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="16dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="@string/register"
-        android:textColor="@color/black"
-        android:textSize="23sp"
+    <ImageView
+        android:id="@+id/imageview_cube"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        android:src="@drawable/img_cube"/>
 
     <TextView
-        android:id="@+id/textview_description"
+        android:id="@+id/textview_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:fontFamily="@font/montserrat_regular"
-        android:text="@string/register_description"
-        android:textColor="@color/dark_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_cube"
+        android:text="@string/input"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_title" />
+        android:textColor="@color/dark_grey"
+        android:fontFamily="@font/montserrat_regular"/>
 
     <EditText
-        android:id="@+id/edittext_username"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="16dp"
-        android:background="@drawable/custom_edittext"
-        android:drawableStart="@drawable/custom_user_icon"
-        android:drawablePadding="10dp"
-        android:drawableTint="@color/white"
-        android:ems="10"
-        android:hint="@string/username"
-        android:inputType="text"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_description" />
-
-    <EditText
-        android:id="@+id/edittext_password"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="16dp"
-        android:background="@drawable/custom_edittext"
-        android:drawableStart="@drawable/custom_padlock_icon"
-        android:drawablePadding="10dp"
-        android:drawableTint="@color/white"
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittext_username" />
-
-    <EditText
-        android:id="@+id/edittext_password_repeat"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="16dp"
-        android:background="@drawable/custom_edittext"
-        android:drawableStart="@drawable/custom_padlock_icon"
-        android:drawablePadding="10dp"
-        android:drawableTint="@color/white"
-        android:ems="10"
-        android:hint="@string/repeat_password"
-        android:inputType="textPassword"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittext_password" />
-
-    <Button
-        android:id="@+id/button_login"
+        android:id="@+id/edittext_edge"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="16dp"
-        android:background="@drawable/custom_button"
-        android:onClick="calculate"
-        android:text="@string/register"
+        android:background="@drawable/custom_edittext"
+        android:drawableTint="@color/white"
+        android:ems="10"
+        android:hint="@string/kubus_input_sisi"
+        android:inputType="numberDecimal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittext_password_repeat" />
+        app:layout_constraintTop_toBottomOf="@+id/textview_input"/>
+
+    <TextView
+        android:id="@+id/textview_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_edge"
+        android:text="@string/result"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_grey"
+        android:fontFamily="@font/montserrat_regular"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_result_surface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_result"
+        style="@style/CustomCardView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textview_surface"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/surface"
+                android:layout_gravity="start"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_grey"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <TextView
+                android:id="@+id/textview_surface_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_horizontal"
+                android:text="-"
+                android:textColor="@color/dark_grey"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_result_volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_result_surface"
+        style="@style/CustomCardView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textview_volume"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/volume"
+                android:layout_gravity="start"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_grey"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <TextView
+                android:id="@+id/textview_volume_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="-"
+                android:textColor="@color/dark_grey"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_result_volume">
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/custom_button"
+            android:onClick="delete"
+            android:text="@string/delete"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/button_calculate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/custom_button"
+            android:onClick="calculate"
+            android:text="@string/calculate"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
