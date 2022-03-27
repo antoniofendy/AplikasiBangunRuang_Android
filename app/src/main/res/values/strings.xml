@@ -9,4 +9,11 @@
     <string name="register">Register</string>
     <string name="register_description">Silahkan isi profil akun Anda</string>
     <string name="register_question">Belum memiliki akun?</string>
+    <string name="menu">Selamat datang di menu utama</string>
+    <string name="menu_description">Silahkan pilih bangun ruang</string>
+    <string name="logout">Logout</string>
+    <string name="help">Help</string>
+    <string name="kubus">Kubus</string>
+    <string name="kerucut">Kerucut</string>
+    <string name="balok">Balok</string>
 </resources>

@@ -4,15 +4,187 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:background="@drawable/ic_wave"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textview_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017"
+        android:text="@string/menu"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_semibold"/>
+
+    <TextView
+        android:id="@+id/textview_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_title"
+        android:text="@string/menu_description"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_grey"
+        android:fontFamily="@font/montserrat_regular"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_description">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_cube"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:onClick="toCube">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:background="@color/tersier_color">
+
+                <!-- Media -->
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="7dp"
+                    android:contentDescription="@string/kubus"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_cube"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kubus"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_cone"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:onClick="toCube">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:background="@color/tersier_color">
+
+                <!-- Media -->
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="7dp"
+                    android:contentDescription="@string/kerucut"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_cone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kerucut"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_cuboid"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:onClick="toCube">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:background="@color/tersier_color">
+
+                <!-- Media -->
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="7dp"
+                    android:contentDescription="@string/balok"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_cuboid"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/balok"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

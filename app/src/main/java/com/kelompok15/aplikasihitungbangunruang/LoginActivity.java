@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class LoginActivity extends AppCompatActivity
 {
     private EditText etUsername, etPassword;
@@ -17,6 +19,7 @@ public class LoginActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_login);
 
         etUsername = findViewById(R.id.edittext_username);

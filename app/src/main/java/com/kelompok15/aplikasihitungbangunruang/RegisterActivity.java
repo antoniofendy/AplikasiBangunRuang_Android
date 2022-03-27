@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class RegisterActivity extends AppCompatActivity
 {
     private EditText etUsername, etPassword, etPasswordRepeat;
@@ -19,6 +21,7 @@ public class RegisterActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_register);
 
         etUsername = findViewById(R.id.edittext_username);
@@ -58,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity
         }
         catch (SQLiteException e)
         {
-            Toast.makeText(RegisterActivity.this, "Username sudah digunakan pengguna lain", Toast.LENGTH_SHORT).show();
+            Toast.makeText(RegisterActivity.this, "Register gagal", Toast.LENGTH_SHORT).show();
         }
     }
 
