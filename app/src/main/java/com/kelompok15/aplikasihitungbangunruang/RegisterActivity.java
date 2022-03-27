@@ -3,6 +3,7 @@ package com.kelompok15.aplikasihitungbangunruang;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
 import android.view.View;
@@ -59,6 +60,9 @@ public class RegisterActivity extends AppCompatActivity
                 finish();
             }
         }
+        catch (SQLiteConstraintException ce) {
+            Toast.makeText(RegisterActivity.this, "Username tidak tersedia.", Toast.LENGTH_SHORT).show();
+        }
         catch (SQLiteException e)
         {
             Toast.makeText(RegisterActivity.this, "Register gagal", Toast.LENGTH_SHORT).show();
@@ -88,11 +92,6 @@ public class RegisterActivity extends AppCompatActivity
         else if(inputType.equals("ulangi password") && inputValue.compareTo(etPassword.getText().toString()) != 0)
         {
             message = "Field " + inputType + " tidak sama dengan field password";
-            return true;
-        }
-        else if(inputType.equals("username") && dbController.checkUsernameAvailability(inputValue))
-        {
-            message = inputType + " sudah digunakan oleh pengguna lain";
             return true;
         }
 
