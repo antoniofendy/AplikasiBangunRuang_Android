@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    //Setting navbar
+    //Setting menu item
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -47,10 +47,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item)
     {
-
         if(item.getItemId() == R.id.submenu_logout)
         {
-            //Jika yang diklik adalah submenu profil
+            //Jika yang diklik adalah submenu logout
             Toast.makeText(MainActivity.this, "Anda mengklik logout", Toast.LENGTH_SHORT).show();
         }
         else if(item.getItemId() == R.id.submenu_help)
@@ -63,6 +62,7 @@ public class MainActivity extends AppCompatActivity
 
     public void toCube(View view)
     {
-        Toast.makeText(MainActivity.this, "Kubus", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, CubeActivity.class);
+        startActivity(intent);
     }
 }
