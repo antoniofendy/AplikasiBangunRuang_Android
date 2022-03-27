@@ -25,6 +25,7 @@ public class CubeActivity extends AppCompatActivity
         Objects.requireNonNull(getSupportActionBar()).hide();
 
         MaterialToolbar toolbar = (MaterialToolbar) findViewById(R.id.topAppBar);
+
         //Setting listener untuk navigation icon
         toolbar.setNavigationOnClickListener(view -> {
             Intent intent = new Intent(CubeActivity.this, MainActivity.class);
