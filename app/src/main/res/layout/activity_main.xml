@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
-                android:background="@color/tersier_color">
+                android:background="@color/light_grey">
 
                 <!-- Media -->
                 <ImageView
@@ -112,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
-                android:background="@color/tersier_color">
+                android:background="@color/light_grey">
 
                 <!-- Media -->
                 <ImageView
@@ -154,7 +154,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
-                android:background="@color/tersier_color">
+                android:background="@color/light_grey">
 
                 <!-- Media -->
                 <ImageView
