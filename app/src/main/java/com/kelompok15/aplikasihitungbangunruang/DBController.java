@@ -57,4 +57,17 @@ public class DBController extends SQLiteOpenHelper
 
         return null;
     }
+
+    public boolean checkUsernameAvailability(String username)
+    {
+        @SuppressLint("Recycle") Cursor cursor = this.getReadableDatabase().rawQuery(
+                "SELECT * FROM users WHERE username = ?", new String[]{username}
+        );
+
+        if(cursor != null && cursor.moveToFirst() && cursor.getCount() > 0)
+        {
+            return true;
+        }
+        return false;
+    }
 }

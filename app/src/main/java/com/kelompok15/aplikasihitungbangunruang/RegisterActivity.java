@@ -44,6 +44,10 @@ public class RegisterActivity extends AppCompatActivity
             {
                 Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
             }
+            else if(validasiInput(etUsername.getText().toString(), "username"))
+            {
+                Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
+            }
             else
             {
                 dbController.insertUser(new User(null, etUsername.getText().toString(), etPassword.getText().toString()));
@@ -73,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity
             message = "Anda harus mengisi field " +  inputType + "!";
             return true;
         }
-        else if (inputValue.length() < 5)
+        else if(inputValue.length() < 5)
         {
             message = "Field " + inputType + " membutuhkan minimum 5 karakter";
             return true;
@@ -81,6 +85,11 @@ public class RegisterActivity extends AppCompatActivity
         else if(inputType.equals("ulangi password") && inputValue.compareTo(etPassword.getText().toString()) != 0)
         {
             message = "Field " + inputType + " tidak sama dengan field password";
+            return true;
+        }
+        else if(inputType.equals("username") && dbController.checkUsernameAvailability(inputValue))
+        {
+            message = inputType + " sudah digunakan oleh pengguna lain";
             return true;
         }
 
