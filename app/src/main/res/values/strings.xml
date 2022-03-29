@@ -23,4 +23,16 @@
     <string name="surface">Luas permukaan</string>
     <string name="volume">Volume</string>
     <string name="kubus_input_sisi">Nilai sisi a</string>
+
+    <string name="help_version">Versi 0.0.0</string>
+    <string name="help_copyright">Copyright ©Kelompok 15</string>
+    <string name="help_description">Dibuat oleh Kelompok 15 sebagai tugas UTS Pemrograman Mobile.</string>
+    <string name="help_contact_title">Kontak Pengembang</string>
+    <string name="help_mail_fendyanto">Fendyanto</string>
+    <string name="help_mail_johanes">Johanes Shane</string>
+    <string name="help_mail_kosasi">Kosasi</string>
+    <string name="help_mail_michelle">Michelle Wong</string>
+    <string name="help_phone_number">081234567890</string>
+    <string name="help_source_description">Source code aplikasi ini tersedia di GitHub.</string>
+    <string name="help_source_link">https://bit.ly/BangunRuangAppSource</string>
 </resources>
