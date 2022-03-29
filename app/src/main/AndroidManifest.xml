@@ -22,6 +22,8 @@
         <activity android:name=".RegisterActivity" android:screenOrientation="portrait" android:exported="true"/>
         <activity android:name=".MainActivity" android:screenOrientation="portrait" android:exported="true"/>
         <activity android:name=".CubeActivity" android:screenOrientation="portrait" android:exported="true"/>
+        <activity android:name=".HelpActivity" android:screenOrientation="portrait" android:exported="true"/>
+
     </application>
 
 </manifest>
