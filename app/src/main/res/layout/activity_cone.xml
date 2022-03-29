@@ -58,7 +58,7 @@
         android:fontFamily="@font/montserrat_regular"/>
 
     <EditText
-        android:id="@+id/edittext_edge"
+        android:id="@+id/edittext_rad"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
@@ -67,7 +67,7 @@
         android:background="@drawable/custom_edittext"
         android:drawableTint="@color/white"
         android:ems="10"
-        android:hint="Nilai jari-jari r"
+        android:hint="Nilai Jari-jari (r)"
         android:inputType="numberDecimal"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
@@ -79,17 +79,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_input"/>
 
+    <EditText
+        android:id="@+id/edittext_height"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/custom_edittext"
+        android:drawableTint="@color/white"
+        android:ems="10"
+        android:hint="Nilai Tinggi (h)"
+        android:inputType="numberDecimal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_input" />
+
     <TextView
         android:id="@+id/textview_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittext_edge"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_height"
         android:text="@string/result"
         android:textSize="16sp"
         android:textStyle="bold"
