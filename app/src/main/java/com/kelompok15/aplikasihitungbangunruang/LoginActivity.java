@@ -30,10 +30,9 @@ public class LoginActivity extends AppCompatActivity
 
     public void login(View view)
     {
-//        User currentUser = dbController.auth(new User(null, etUsername.getText().toString(), etPassword.getText().toString()));
+        User currentUser = dbController.auth(new User(null, etUsername.getText().toString(), etPassword.getText().toString()));
 
-        //currentUser != null
-        if(true)
+        if(currentUser != null)
         {
             Toast.makeText(LoginActivity.this, "Login sukses", Toast.LENGTH_SHORT).show();
 
