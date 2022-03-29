@@ -6,13 +6,12 @@
     <color name="teal_200"></color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="primary_color">#073042</color>
     <color name="tertiary_color">#9BD6DD</color>
     <color name="dark_grey">#6D6D6D</color>
     <color name="light_grey">#E4DBDB</color>
 
     <color name="white">#FFFFFFFF</color>
-    <color name="primary">#E4DBDB</color>
+    <color name="primary_color">#E4DBDB</color>
     <color name="secondary_color">#073042</color>
-    <color name="accent">#FF03DAC5</color>
+    <color name="accent_color">#FF03DAC5</color>
 </resources>
