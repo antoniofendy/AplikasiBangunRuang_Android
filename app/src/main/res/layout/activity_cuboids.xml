@@ -97,11 +97,11 @@
 
     <EditText
         android:id="@+id/edittext_width"
-        android:layout_width="379dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="24dp"
         android:background="@drawable/custom_edittext"
         android:drawableTint="@color/white"
         android:ems="10"
@@ -112,9 +112,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textview_height"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_width" />
 
