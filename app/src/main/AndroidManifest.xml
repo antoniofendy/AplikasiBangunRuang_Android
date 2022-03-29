@@ -22,12 +22,9 @@
         <activity android:name=".RegisterActivity" android:screenOrientation="portrait" android:exported="true"/>
         <activity android:name=".MainActivity" android:screenOrientation="portrait" android:exported="true"/>
         <activity android:name=".CubeActivity" android:screenOrientation="portrait" android:exported="true"/>
-<<<<<<< Updated upstream
         <activity android:name=".HelpActivity" android:screenOrientation="portrait" android:exported="true"/>
-
-=======
         <activity android:name=".CuboidActivity" android:screenOrientation="portrait" android:exported="true"/>
->>>>>>> Stashed changes
+
     </application>
 
 </manifest>

@@ -1,8 +1,5 @@
 package com.kelompok15.aplikasihitungbangunruang;
 
-<<<<<<< Updated upstream
-public class CuboidActivity {
-=======
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -86,5 +83,4 @@ public class CuboidActivity extends AppCompatActivity {
         tvSurfaceResult.setText("-");
         tvVolumeResult.setText("-");
     }
->>>>>>> Stashed changes
 }
