@@ -73,4 +73,9 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(MainActivity.this, CuboidActivity.class);
         startActivity(intent);
     }
+
+    public void toCone(View view) {
+        Intent intent = new Intent(MainActivity.this, ConeActivity.class);
+        startActivity(intent);
+    }
 }

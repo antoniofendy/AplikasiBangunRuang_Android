@@ -41,7 +41,7 @@
         android:src="@drawable/img_cone"/>
 
     <TextView
-        android:id="@+id/textview_input"
+        android:id="@+id/textview_rad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -51,11 +51,27 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageview_cube"
-        android:text="@string/input"
+        android:text="Jari-jari (r)"
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="@color/dark_grey"
         android:fontFamily="@font/montserrat_regular"/>
+
+    <TextView
+        android:id="@+id/textview_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Tinggi (h)"
+        android:textColor="@color/dark_grey"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_rad" />
 
     <EditText
         android:id="@+id/edittext_rad"
@@ -67,7 +83,7 @@
         android:background="@drawable/custom_edittext"
         android:drawableTint="@color/white"
         android:ems="10"
-        android:hint="Nilai Jari-jari (r)"
+        android:hint="Nilai Jari-jari"
         android:inputType="numberDecimal"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
@@ -77,19 +93,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_input"/>
+        app:layout_constraintTop_toBottomOf="@+id/textview_rad"/>
 
     <EditText
         android:id="@+id/edittext_height"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="73dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/custom_edittext"
         android:drawableTint="@color/white"
         android:ems="10"
-        android:hint="Nilai Tinggi (h)"
+        android:hint="Nilai Tinggi"
         android:inputType="numberDecimal"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
@@ -98,7 +114,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_input" />
+        app:layout_constraintTop_toBottomOf="@+id/textview_height" />
 
     <TextView
         android:id="@+id/textview_result"
