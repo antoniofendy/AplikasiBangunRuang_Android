@@ -100,12 +100,12 @@
                 android:id="@+id/card_cone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
-                app:cardElevation="5dp"
-                android:onClick="toCone">
+                android:onClick="toCone"
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -133,8 +133,8 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="30dp"
                         android:fontFamily="@font/montserrat_semibold"
-                        android:textAlignment="textStart"
                         android:text="@string/kerucut"
+                        android:textAlignment="textStart"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
