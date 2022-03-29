@@ -1,4 +1,6 @@
 package com.kelompok15.aplikasihitungbangunruang;
 
-public class ConeActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ConeActivity extends AppCompatActivity {
 }
