@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,240 +9,202 @@
     tools:context=".ConeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
+        android:id="@+id/appbar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
+            android:id="@+id/appbar_toolbar"
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/ic_back_to_menu"
-            app:title="Kerucut"
-            app:titleCentered="true"/>
+            app:title="@string/shape_cone"
+            app:titleCentered="true" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/nested_scrollview"
+        android:id="@+id/scrollview_container"
         android:layout_width="match_parent"
-        android:layout_height="680dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:paddingBottom="30dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/linearlayout_button"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar">
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imageview_cone"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_marginTop="20dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/img_cone"/>
+                android:layout_marginTop="20dp"
+                android:src="@drawable/img_cone" />
 
             <TextView
-                android:id="@+id/textview_rad"
+                android:id="@+id/textview_radius"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Jari-jari (r)"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/calculator_cone_radius_title"
+                android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/dark_grey"
-                android:fontFamily="@font/montserrat_regular"/>
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/edittext_rad"
+                android:id="@+id/edittext_radius"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="52dp"
                 android:background="@drawable/custom_edittext"
                 android:drawableTint="@color/white"
                 android:ems="10"
-                android:hint="Input nilai jari-jari"
+                android:hint="@string/calculator_cone_radius_input"
                 android:inputType="numberDecimal"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textSize="16sp"/>
+                android:textColorHint="@color/secondary_color"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/textview_height"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/montserrat_regular"
-                android:text="Tinggi (h)"
-                android:textColor="@color/dark_grey"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/calculator_cone_height_title"
+                android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/edittext_height"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="52dp"
                 android:background="@drawable/custom_edittext"
                 android:drawableTint="@color/white"
                 android:ems="10"
-                android:hint="Input nilai tinggi"
+                android:hint="@string/calculator_cone_height_input"
                 android:inputType="numberDecimal"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColorHint="@color/secondary_color"
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/textview_result"
+                android:id="@+id/textview_result_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="@string/result"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/calculator_result_title"
+                android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/dark_grey"
-                android:fontFamily="@font/montserrat_regular"/>
+                android:textStyle="bold" />
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_result_surface"
+                android:id="@+id/card_result_container"
+                style="@style/CustomCardView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                style="@style/CustomCardView">
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/textview_surface"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
                         android:layout_marginEnd="8dp"
-                        android:text="@string/surface"
-                        android:layout_gravity="start"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="12dp"
+                        android:text="@string/calculator_result_surface"
                         android:textColor="@color/dark_grey"
-                        android:fontFamily="@font/montserrat_regular"/>
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textview_surface_result"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
+                        android:layout_height="match_parent"
                         android:layout_marginEnd="8dp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:textAlignment="textEnd"
+                        android:gravity="center_vertical"
                         android:text="-"
+                        android:textAlignment="textEnd"
                         android:textColor="@color/dark_grey"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                        android:textSize="16sp" />
 
+                </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_result_volume"
+                android:id="@+id/card_result_container"
+                style="@style/CustomCardView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                style="@style/CustomCardView">
+                android:layout_height="48dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/textview_volume"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
                         android:layout_marginEnd="8dp"
-                        android:text="@string/volume"
-                        android:layout_gravity="start"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="12dp"
+                        android:text="@string/calculator_result_volume"
                         android:textColor="@color/dark_grey"
-                        android:fontFamily="@font/montserrat_regular"/>
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textview_volume_result"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="textEnd"
+                        android:layout_height="match_parent"
                         android:layout_marginEnd="8dp"
-                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center_vertical"
                         android:text="-"
+                        android:textAlignment="textEnd"
                         android:textColor="@color/dark_grey"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                        android:textSize="16sp" />
 
+                </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
         android:id="@+id/linearlayout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:paddingBottom="8dp">
 
         <Button
-            android:id="@+id/button_reset"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:paddingTop="13dp"
-            android:paddingBottom="13dp"
+            android:id="@+id/button_clear"
             style="?attr/materialButtonOutlinedStyle"
-            app:strokeColor="@color/secondary_color"
-            app:strokeWidth="1dp"
-            android:onClick="delete"
-            android:text="@string/delete"
-            android:textSize="14sp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="@string/calculator_button_clean" />
 
         <Button
             android:id="@+id/button_calculate"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/custom_button"
-            android:onClick="calculate"
-            android:text="@string/calculate"
-            android:textSize="14sp"/>
-
+            android:text="@string/calculator_button_calculate" />
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

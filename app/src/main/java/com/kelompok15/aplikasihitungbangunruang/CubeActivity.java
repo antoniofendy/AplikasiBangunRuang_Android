@@ -25,11 +25,11 @@ public class CubeActivity extends AppCompatActivity
         setContentView(R.layout.activity_cube);
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        etEdgeInput = findViewById(R.id.edittext_edge);
+        etEdgeInput = findViewById(R.id.edittext_vertex);
         tvSurfaceResult = findViewById(R.id.textview_surface_result);
         tvVolumeResult = findViewById(R.id.textview_volume_result);
 
-        MaterialToolbar toolbar = (MaterialToolbar) findViewById(R.id.topAppBar);
+        MaterialToolbar toolbar = findViewById(R.id.appbar_toolbar);
 
         //Setting listener untuk navigation icon
         toolbar.setNavigationOnClickListener(view -> {
@@ -40,33 +40,31 @@ public class CubeActivity extends AppCompatActivity
             startActivity(intent);
             finish();
         });
-    }
 
-    public void calculate(View view)
-    {
-        etEdgeInput.clearFocus();
+        findViewById(R.id.button_calculate).setOnClickListener(view -> {
+            etEdgeInput.clearFocus();
 
-        if(etEdgeInput.length() != 0)
-        {
-            double edge = Double.parseDouble(String.valueOf(etEdgeInput.getText()));
-            double surface = 6 * (Math.pow(edge, 2));
-            double volume = Math.pow(edge, 3);
+            if(etEdgeInput.length() != 0)
+            {
+                double vertex = Double.parseDouble(String.valueOf(etEdgeInput.getText()));
+                double surface = 6 * (Math.pow(vertex, 2));
+                double volume = Math.pow(vertex, 3);
 
-            tvSurfaceResult.setText(String.valueOf(surface));
-            tvVolumeResult.setText(String.valueOf(volume));
-        }
-        else
-        {
-            Toast.makeText(CubeActivity.this, "Anda belum menginput nilai sisi a", Toast.LENGTH_SHORT).show();
-        }
-    }
+                tvSurfaceResult.setText(String.valueOf(surface));
+                tvVolumeResult.setText(String.valueOf(volume));
+            }
+            else
+            {
+                Toast.makeText(CubeActivity.this, "Semua field belum terisi.", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-    public void delete(View view)
-    {
-        etEdgeInput.clearFocus();
+        findViewById(R.id.button_clear).setOnClickListener(view -> {
+            etEdgeInput.clearFocus();
 
-        etEdgeInput.setText("");
-        tvSurfaceResult.setText("-");
-        tvVolumeResult.setText("-");
+            etEdgeInput.setText("");
+            tvSurfaceResult.setText("-");
+            tvVolumeResult.setText("-");
+        });
     }
 }

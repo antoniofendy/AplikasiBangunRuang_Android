@@ -30,7 +30,7 @@ public class CuboidActivity extends AppCompatActivity {
         tvSurfaceResult = findViewById(R.id.textview_surface_result);
         tvVolumeResult = findViewById(R.id.textview_volume_result);
 
-        MaterialToolbar toolbar = (MaterialToolbar) findViewById(R.id.topAppBar);
+        MaterialToolbar toolbar = findViewById(R.id.appbar_toolbar);
 
         //Setting listener untuk navigation icon
         toolbar.setNavigationOnClickListener(view -> {
@@ -41,42 +41,40 @@ public class CuboidActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
-    }
 
-    public void calculate(View view)
-    {
-        etLength.clearFocus();
-        etHeight.clearFocus();
-        etWidth.clearFocus();
+        findViewById(R.id.button_calculate).setOnClickListener(view -> {
+            etLength.clearFocus();
+            etHeight.clearFocus();
+            etWidth.clearFocus();
 
-        if(etLength.length() != 0 || etWidth.length()!=0 || etHeight.length() !=0)
-        {
-            double Length = Double.parseDouble(String.valueOf(etLength.getText()));
-            double Width = Double.parseDouble(String.valueOf(etWidth.getText()));
-            double Height = Double.parseDouble(String.valueOf(etHeight.getText()));
+            if(etLength.length() != 0 || etWidth.length()!=0 || etHeight.length() !=0)
+            {
+                double Length = Double.parseDouble(String.valueOf(etLength.getText()));
+                double Width = Double.parseDouble(String.valueOf(etWidth.getText()));
+                double Height = Double.parseDouble(String.valueOf(etHeight.getText()));
 
-            double surface = 2* ((Length * Width) + (Length * Height) + (Width * Height));
-            double volume = Length * Width * Height;
+                double surface = 2* ((Length * Width) + (Length * Height) + (Width * Height));
+                double volume = Length * Width * Height;
 
-            tvSurfaceResult.setText(String.valueOf(surface));
-            tvVolumeResult.setText(String.valueOf(volume));
-        }
-        else
-        {
-            Toast.makeText(CuboidActivity.this, "Anda belum menginput nilai sisi a", Toast.LENGTH_SHORT).show();
-        }
-    }
+                tvSurfaceResult.setText(String.valueOf(surface));
+                tvVolumeResult.setText(String.valueOf(volume));
+            }
+            else
+            {
+                Toast.makeText(CuboidActivity.this, "Semua field belum terisi.", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-    public void delete(View view)
-    {
-        etLength.clearFocus();
-        etHeight.clearFocus();
-        etWidth.clearFocus();
+        findViewById(R.id.button_clear).setOnClickListener(view -> {
+            etLength.clearFocus();
+            etHeight.clearFocus();
+            etWidth.clearFocus();
 
-        etLength.setText("");
-        etWidth.setText("");
-        etHeight.setText("");
-        tvSurfaceResult.setText("-");
-        tvVolumeResult.setText("-");
+            etLength.setText("");
+            etWidth.setText("");
+            etHeight.setText("");
+            tvSurfaceResult.setText("-");
+            tvVolumeResult.setText("-");
+        });
     }
 }
