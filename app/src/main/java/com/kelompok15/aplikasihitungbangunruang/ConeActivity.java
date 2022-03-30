@@ -19,7 +19,6 @@ public class ConeActivity extends AppCompatActivity {
     EditText etRadInput, etHeightInput;
     TextView tvSurfaceResult, tvVolumeResult;
 
-
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
@@ -42,21 +41,12 @@ public class ConeActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
-        //Setting listener untuk submenu
-        toolbar.setOnMenuItemClickListener(menuItem -> {
-            if(menuItem.getItemId() == R.id.submenu_logout)
-            {
-                Toast.makeText(ConeActivity.this, "Anda mengklik logout", Toast.LENGTH_SHORT).show();
-            }
-            else if(menuItem.getItemId() == R.id.submenu_help)
-            {
-                Toast.makeText(ConeActivity.this, "Anda mengklik help", Toast.LENGTH_SHORT).show();
-            }
-            return false;
-        });
     }
 
     public void calculate(View view){
+        etRadInput.clearFocus();
+        etHeightInput.clearFocus();
+
         float phi = 3.14f;                                                                          //Deklarasi variabel Phi
 
         if(etRadInput.length() != 0 && etHeightInput.length() != 0)
@@ -86,6 +76,9 @@ public class ConeActivity extends AppCompatActivity {
 
     public void delete(View view)
     {
+        etRadInput.clearFocus();
+        etHeightInput.clearFocus();
+
         etRadInput.setText("");
         etHeightInput.setText("");
         tvSurfaceResult.setText("-");

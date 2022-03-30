@@ -30,6 +30,9 @@ public class LoginActivity extends AppCompatActivity
 
     public void login(View view)
     {
+        etUsername.clearFocus();
+        etPassword.clearFocus();
+
         User currentUser = dbController.auth(new User(null, etUsername.getText().toString(), etPassword.getText().toString()));
 
         if(currentUser != null)
@@ -49,6 +52,9 @@ public class LoginActivity extends AppCompatActivity
 
     public void toRegister(View view)
     {
+        etUsername.clearFocus();
+        etPassword.clearFocus();
+
         Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
         startActivity(intent);
         finish();

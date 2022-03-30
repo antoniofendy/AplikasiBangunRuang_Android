@@ -40,22 +40,12 @@ public class CubeActivity extends AppCompatActivity
             startActivity(intent);
             finish();
         });
-        //Setting listener untuk submenu
-        toolbar.setOnMenuItemClickListener(menuItem -> {
-            if(menuItem.getItemId() == R.id.submenu_logout)
-            {
-                Toast.makeText(CubeActivity.this, "Anda mengklik logout", Toast.LENGTH_SHORT).show();
-            }
-            else if(menuItem.getItemId() == R.id.submenu_help)
-            {
-                Toast.makeText(CubeActivity.this, "Anda mengklik help", Toast.LENGTH_SHORT).show();
-            }
-            return false;
-        });
     }
 
     public void calculate(View view)
     {
+        etEdgeInput.clearFocus();
+
         if(etEdgeInput.length() != 0)
         {
             double edge = Double.parseDouble(String.valueOf(etEdgeInput.getText()));
@@ -73,6 +63,8 @@ public class CubeActivity extends AppCompatActivity
 
     public void delete(View view)
     {
+        etEdgeInput.clearFocus();
+
         etEdgeInput.setText("");
         tvSurfaceResult.setText("-");
         tvVolumeResult.setText("-");

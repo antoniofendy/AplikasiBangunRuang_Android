@@ -34,6 +34,10 @@ public class RegisterActivity extends AppCompatActivity
 
     public void register(View view)
     {
+        etUsername.clearFocus();
+        etPassword.clearFocus();
+        etPasswordRepeat.clearFocus();
+
         try
         {
             if(validasiInput(etUsername.getText().toString(), "username"))

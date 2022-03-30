@@ -41,22 +41,14 @@ public class CuboidActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
-        //Setting listener untuk submenu
-        toolbar.setOnMenuItemClickListener(menuItem -> {
-            if(menuItem.getItemId() == R.id.submenu_logout)
-            {
-                Toast.makeText(CuboidActivity.this, "Anda mengklik logout", Toast.LENGTH_SHORT).show();
-            }
-            else if(menuItem.getItemId() == R.id.submenu_help)
-            {
-                Toast.makeText(CuboidActivity.this, "Anda mengklik help", Toast.LENGTH_SHORT).show();
-            }
-            return false;
-        });
     }
 
     public void calculate(View view)
     {
+        etLength.clearFocus();
+        etHeight.clearFocus();
+        etWidth.clearFocus();
+
         if(etLength.length() != 0 || etWidth.length()!=0 || etHeight.length() !=0)
         {
             double Length = Double.parseDouble(String.valueOf(etLength.getText()));
@@ -77,6 +69,10 @@ public class CuboidActivity extends AppCompatActivity {
 
     public void delete(View view)
     {
+        etLength.clearFocus();
+        etHeight.clearFocus();
+        etWidth.clearFocus();
+
         etLength.setText("");
         etWidth.setText("");
         etHeight.setText("");

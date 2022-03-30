@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity
         else if(item.getItemId() == R.id.submenu_help)
         {
             //Jika yang diklik adalah submenu help
-            Toast.makeText(MainActivity.this, "Anda mengklik help", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, HelpActivity.class);
             startActivity(intent);
 
