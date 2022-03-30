@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity
 
         if(bundle != null)
         {
-            textViewTitle.setText("Halo " + bundle.getString("username"));
+            textViewTitle.setText("Halo, " + bundle.getString("username"));
         }
     }
 
@@ -50,7 +50,10 @@ public class MainActivity extends AppCompatActivity
         if(item.getItemId() == R.id.submenu_logout)
         {
             //Jika yang diklik adalah submenu logout
-            Toast.makeText(MainActivity.this, "Anda mengklik logout", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+
         }
         else if(item.getItemId() == R.id.submenu_help)
         {
