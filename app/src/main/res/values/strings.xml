@@ -3,31 +3,50 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="repeat_password">Ulangi password</string>
-    <string name="back">Kembali</string>
-    <string name="login">Login</string>
-    <string name="login_description">Silahkan isi username dan password Anda</string>
-    <string name="register">Register</string>
-    <string name="register_description">Silahkan isi profil akun Anda</string>
-    <string name="register_question">Belum memiliki akun?</string>
-    <string name="menu">Selamat datang di menu utama</string>
-    <string name="menu_description">Silahkan pilih bangun ruang</string>
-    <string name="logout">Logout</string>
-    <string name="help">Help</string>
-    <string name="input">Input</string>
-    <string name="result">Hasil</string>
-    <string name="calculate">Hitung</string>
-    <string name="delete">Hapus</string>
-    <string name="kubus">Kubus</string>
-    <string name="kerucut">Kerucut</string>
-    <string name="balok">Balok</string>
-    <string name="surface">Luas permukaan</string>
-    <string name="volume">Volume</string>
-    <string name="kubus_input_sisi">Input nilai sisi</string>
 
-    <string name="help_version">Versi 0.0.0</string>
+    <string name="back">Kembali</string>
+
+    <string name="login">Login</string>
+    <string name="login_description">Masukkan username dan password Anda</string>
+
+    <string name="register">Register</string>
+    <string name="register_description">Silakan isi profil akun Anda</string>
+    <string name="register_question">Belum memiliki akun?</string>
+
+    <string name="menu">Selamat datang di menu utama</string>
+    <string name="menu_description">Silakan pilih bangun ruang</string>
+
+    <string name="kebab_logout">Logout</string>
+    <string name="kebab_help">Bantuan</string>
+
+    <string name="shape_cube">Kubus</string>
+    <string name="shape_cone">Kerucut</string>
+    <string name="shape_cuboid">Balok</string>
+
+    <string name="calculator_button_clean">Hapus</string>
+    <string name="calculator_button_calculate">Hitung</string>
+    <string name="calculator_result_title">Hasil</string>
+    <string name="calculator_result_surface">Luas permukaan</string>
+    <string name="calculator_result_volume">Volume</string>
+
+    <string name="calculator_cube_vertex_title">Sisi (a)</string>
+    <string name="calculator_cube_vertex_input">Nilai sisi</string>
+
+    <string name="calculator_cone_radius_title">Jari-jari (r)</string>
+    <string name="calculator_cone_radius_input">Nilai jari-jari</string>
+    <string name="calculator_cone_height_title">Tinggi (h)</string>
+    <string name="calculator_cone_height_input">Nilai tinggi</string>
+
+    <string name="calculator_cuboid_length_title">Panjang (a)</string>
+    <string name="calculator_cuboid_length_input">Nilai panjang</string>
+    <string name="calculator_cuboid_width_title">Lebar (b)</string>
+    <string name="calculator_cuboid_width_input">Nilai lebar</string>
+    <string name="calculator_cuboid_height_title">Tinggi (c)</string>
+    <string name="calculator_cuboid_height_input">Nilai tinggi</string>
+
+    <string name="help_version">Versi 0.1.0</string>
     <string name="help_copyright">Copyright ©Kelompok 15</string>
     <string name="help_description">Dibuat oleh Kelompok 15 sebagai tugas UTS Pemrograman Mobile.</string>
-    <string name="help_contact_title">Kontak Pengembang</string>
     <string name="help_mail_fendyanto">Fendyanto</string>
     <string name="help_mail_johanes">Johanes Shane</string>
     <string name="help_mail_kosasi">Kosasi</string>
