@@ -30,54 +30,52 @@ public class RegisterActivity extends AppCompatActivity
         etPasswordRepeat = findViewById(R.id.edittext_password_repeat);
 
         dbController = new DBController(this, null, 1);
-    }
 
-    public void register(View view)
-    {
-        etUsername.clearFocus();
-        etPassword.clearFocus();
-        etPasswordRepeat.clearFocus();
+        findViewById(R.id.button_register).setOnClickListener(view -> {
+            etUsername.clearFocus();
+            etPassword.clearFocus();
+            etPasswordRepeat.clearFocus();
 
-        try
-        {
-            if(validasiInput(etUsername.getText().toString(), "username"))
+            try
             {
-                Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
+                if(validasiInput(etUsername.getText().toString(), "username"))
+                {
+                    Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
+                }
+                else if(validasiInput(etPassword.getText().toString(), "password"))
+                {
+                    Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
+                }
+                else if(validasiInput(etPasswordRepeat.getText().toString(), "ulangi password"))
+                {
+                    Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
+                }
+                else if(validasiInput(etUsername.getText().toString(), "username"))
+                {
+                    Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    dbController.insertUser(new User(null, etUsername.getText().toString(), etPassword.getText().toString()));
+                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
-            else if(validasiInput(etPassword.getText().toString(), "password"))
+            catch (SQLiteConstraintException ce) {
+                Toast.makeText(RegisterActivity.this, "Username tidak tersedia.", Toast.LENGTH_SHORT).show();
+            }
+            catch (SQLiteException e)
             {
-                Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "Register gagal", Toast.LENGTH_SHORT).show();
             }
-            else if(validasiInput(etPasswordRepeat.getText().toString(), "ulangi password"))
-            {
-                Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
-            }
-            else if(validasiInput(etUsername.getText().toString(), "username"))
-            {
-                Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
-            }
-            else
-            {
-                dbController.insertUser(new User(null, etUsername.getText().toString(), etPassword.getText().toString()));
-                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        }
-        catch (SQLiteConstraintException ce) {
-            Toast.makeText(RegisterActivity.this, "Username tidak tersedia.", Toast.LENGTH_SHORT).show();
-        }
-        catch (SQLiteException e)
-        {
-            Toast.makeText(RegisterActivity.this, "Register gagal", Toast.LENGTH_SHORT).show();
-        }
-    }
+        });
 
-    public void toLogin(View view)
-    {
-        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-        startActivity(intent);
-        finish();
+        findViewById(R.id.button_back).setOnClickListener(view -> {
+            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        });
     }
 
     //Fungsi untuk validasi input

@@ -33,6 +33,21 @@ public class MainActivity extends AppCompatActivity
         {
             textViewTitle.setText("Halo, " + bundle.getString("username"));
         }
+
+        findViewById(R.id.card_cube).setOnClickListener(view -> {
+            Intent shape = new Intent(MainActivity.this, CubeActivity.class);
+            startActivity(shape);
+        });
+
+        findViewById(R.id.card_cone).setOnClickListener(view -> {
+            Intent shape = new Intent(MainActivity.this, ConeActivity.class);
+            startActivity(shape);
+        });
+
+        findViewById(R.id.card_cuboid).setOnClickListener(view -> {
+            Intent shape = new Intent(MainActivity.this, CuboidActivity.class);
+            startActivity(shape);
+        });
     }
 
     //Setting menu item
@@ -63,21 +78,5 @@ public class MainActivity extends AppCompatActivity
 
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    public void toCube(View view)
-    {
-        Intent intent = new Intent(MainActivity.this, CubeActivity.class);
-        startActivity(intent);
-    }
-
-    public void toCuboid(View view) {
-        Intent intent = new Intent(MainActivity.this, CuboidActivity.class);
-        startActivity(intent);
-    }
-
-    public void toCone(View view) {
-        Intent intent = new Intent(MainActivity.this, ConeActivity.class);
-        startActivity(intent);
     }
 }

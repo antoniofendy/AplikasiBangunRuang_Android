@@ -13,35 +13,35 @@
             android:id="@+id/button_back"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.017"
             android:background="@android:color/transparent"
             android:scaleType="centerInside"
             android:src="@drawable/ic_back"
-            android:onClick="toLogin"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.005"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textview_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_back"
+            android:fontFamily="@font/montserrat_semibold"
             android:text="@string/register"
-            android:textSize="23sp"
             android:textColor="@color/black"
-            android:fontFamily="@font/montserrat_semibold"/>
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.562"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.134" />
 
         <TextView
             android:id="@+id/textview_description"
@@ -134,9 +134,8 @@
 
         <Button
             android:id="@+id/button_login"
-            android:background="@drawable/custom_button"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
@@ -145,8 +144,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edittext_password_repeat"
             android:text="@string/register"
-            android:textSize="16sp"
-            android:onClick="register"/>
+            android:textSize="16sp"/>
 
 <!--        <ImageView-->
 <!--            android:layout_width="match_parent"-->

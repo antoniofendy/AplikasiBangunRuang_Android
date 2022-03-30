@@ -2,8 +2,10 @@ package com.kelompok15.aplikasihitungbangunruang;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.transition.Explode;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -26,38 +28,34 @@ public class LoginActivity extends AppCompatActivity
         etPassword = findViewById(R.id.edittext_password);
 
         dbController = new DBController(this, null, 1);
-    }
 
-    public void login(View view)
-    {
-        etUsername.clearFocus();
-        etPassword.clearFocus();
+        findViewById(R.id.button_login).setOnClickListener(view -> {
+            etUsername.clearFocus();
+            etPassword.clearFocus();
 
-        User currentUser = dbController.auth(new User(null, etUsername.getText().toString(), etPassword.getText().toString()));
+            User currentUser = dbController.auth(new User(null, etUsername.getText().toString(), etPassword.getText().toString()));
 
-        if(currentUser != null)
-        {
-            Toast.makeText(LoginActivity.this, "Login sukses", Toast.LENGTH_SHORT).show();
+            if(currentUser != null)
+            {
+                Toast.makeText(LoginActivity.this, "Login sukses", Toast.LENGTH_SHORT).show();
 
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            intent.putExtra("username", etUsername.getText().toString());
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                intent.putExtra("username", etUsername.getText().toString());
+                startActivity(intent);
+                finish();
+            }
+            else
+            {
+                Toast.makeText(LoginActivity.this, "Login gagal", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        findViewById(R.id.button_register).setOnClickListener(view -> {
+            etUsername.clearFocus();
+            etPassword.clearFocus();
+
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(intent);
-            finish();
-        }
-        else
-        {
-            Toast.makeText(LoginActivity.this, "Login gagal", Toast.LENGTH_SHORT).show();
-        }
+        });
     }
-
-    public void toRegister(View view)
-    {
-        etUsername.clearFocus();
-        etPassword.clearFocus();
-
-        Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
 }

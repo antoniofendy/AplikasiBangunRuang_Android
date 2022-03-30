@@ -59,19 +59,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="16dp"-->
-<!--                android:layout_marginBottom="8dp"-->
-<!--                android:layout_marginHorizontal="40dp"-->
-<!--                android:textSize="16sp"-->
-<!--                android:text="@string/help_contact_title"-->
-<!--                android:gravity="center"-->
-<!--                android:textColor="@color/primary_color">-->
-
-<!--            </TextView>-->
-
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card_help_contact_fendy"
                 android:layout_width="match_parent"

@@ -55,56 +55,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                app:cardElevation="5dp"
-                android:onClick="toCube">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:orientation="horizontal">
-
-                    <!-- Media -->
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="20dp"
-                        android:contentDescription="@string/kubus"
-                        android:scaleType="centerInside"
-                        app:srcCompat="@drawable/ic_cube" />
-
-                    <!-- Title, secondary and supporting text -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="30dp"
-                        android:fontFamily="@font/montserrat_semibold"
-                        android:textAlignment="textStart"
-                        android:text="@string/kubus"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_cone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:onClick="toCone"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="2dp"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -116,13 +69,58 @@
 
                     <!-- Media -->
                     <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="20dp"
-                        android:contentDescription="@string/kerucut"
+                        android:contentDescription="@string/shape_cube"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/ic_cube" />
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="30dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textAlignment="textStart"
+                        android:text="@string/shape_cube"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_cone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="2dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- Media -->
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:contentDescription="@string/shape_cone"
                         android:scaleType="centerInside"
                         app:srcCompat="@drawable/ic_cone" />
 
@@ -133,7 +131,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="30dp"
                         android:fontFamily="@font/montserrat_semibold"
-                        android:text="@string/kerucut"
+                        android:text="@string/shape_cone"
                         android:textAlignment="textStart"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
@@ -147,11 +145,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                app:cardElevation="5dp"
-                android:onClick="toCuboid">
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="2dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -162,13 +159,13 @@
 
                     <!-- Media -->
                     <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="20dp"
-                        android:contentDescription="@string/balok"
+                        android:contentDescription="@string/shape_cuboid"
                         android:scaleType="centerInside"
                         app:srcCompat="@drawable/ic_cuboid" />
 
@@ -180,7 +177,7 @@
                         android:layout_marginEnd="30dp"
                         android:fontFamily="@font/montserrat_semibold"
                         android:textAlignment="textStart"
-                        android:text="@string/balok"
+                        android:text="@string/shape_cuboid"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
