@@ -22,7 +22,7 @@
     <string name="balok">Balok</string>
     <string name="surface">Luas permukaan</string>
     <string name="volume">Volume</string>
-    <string name="kubus_input_sisi">Nilai sisi a</string>
+    <string name="kubus_input_sisi">Input nilai sisi</string>
 
     <string name="help_version">Versi 0.0.0</string>
     <string name="help_copyright">Copyright ©Kelompok 15</string>
