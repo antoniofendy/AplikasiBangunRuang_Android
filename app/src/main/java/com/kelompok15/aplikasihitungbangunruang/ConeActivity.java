@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
+import java.text.DecimalFormat;
 import java.util.Objects;
 
 public class ConeActivity extends AppCompatActivity {
@@ -67,8 +68,8 @@ public class ConeActivity extends AppCompatActivity {
             double surface = (phi * (Math.pow(rad,2))) + (phi * rad * slant) ;                      // (Phi * r^2) + (Phi * r * s)
             double volume = (phi * (Math.pow(rad, 2)) * height) / 3;                                // (Phi * r^2 * t)/3
 
-            tvSurfaceResult.setText(String.valueOf(surface));
-            tvVolumeResult.setText(String.valueOf(volume));
+            tvSurfaceResult.setText(String.format("%.3f", surface));
+            tvVolumeResult.setText(String.format("%.3f", volume));
         }
         else if(etRadInput.length() == 0)
         {
