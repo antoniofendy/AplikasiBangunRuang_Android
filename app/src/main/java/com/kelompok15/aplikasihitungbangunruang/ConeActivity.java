@@ -72,11 +72,22 @@ public class ConeActivity extends AppCompatActivity {
         }
         else if(etRadInput.length() == 0)
         {
-            Toast.makeText(ConeActivity.this, "Anda belum menginput nilai jari jari (r)", Toast.LENGTH_SHORT).show();
-        }else
+            Toast.makeText(ConeActivity.this, "Anda belum menginput nilai jari-jari (r)", Toast.LENGTH_SHORT).show();
+        }else if(etHeightInput.length() == 0)
         {
             Toast.makeText(ConeActivity.this, "Anda belum menginput nilai tinggi (h)", Toast.LENGTH_SHORT).show();
+        }else
+        {
+            Toast.makeText(ConeActivity.this, "Anda belum menginput nilai jari-jari (r) dan tinggi (h)", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void delete(View view)
+    {
+        etRadInput.setText("");
+        etHeightInput.setText("");
+        tvSurfaceResult.setText("-");
+        tvVolumeResult.setText("-");
     }
 
 }
