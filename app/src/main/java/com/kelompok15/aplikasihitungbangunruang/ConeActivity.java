@@ -25,7 +25,7 @@ public class ConeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cone);
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        etRadInput = findViewById(R.id.edittext_edge);
+        etRadInput = findViewById(R.id.edittext_rad);
         etHeightInput = findViewById(R.id.edittext_height);
         tvSurfaceResult = findViewById(R.id.textview_surface_result);
         tvVolumeResult = findViewById(R.id.textview_volume_result);
@@ -73,7 +73,8 @@ public class ConeActivity extends AppCompatActivity {
         else if(etRadInput.length() == 0)
         {
             Toast.makeText(ConeActivity.this, "Anda belum menginput nilai jari-jari (r)", Toast.LENGTH_SHORT).show();
-        }else if(etHeightInput.length() == 0)
+        }
+        else if(etHeightInput.length() == 0)
         {
             Toast.makeText(ConeActivity.this, "Anda belum menginput nilai tinggi (h)", Toast.LENGTH_SHORT).show();
         }else
