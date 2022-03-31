@@ -47,7 +47,7 @@ public class CuboidActivity extends AppCompatActivity {
             etHeight.clearFocus();
             etWidth.clearFocus();
 
-            if(etLength.length() != 0 || etWidth.length()!=0 || etHeight.length() !=0)
+            if(etLength.length() != 0 && etWidth.length()!=0 && etHeight.length() !=0)
             {
                 double Length = Double.parseDouble(String.valueOf(etLength.getText()));
                 double Width = Double.parseDouble(String.valueOf(etWidth.getText()));
