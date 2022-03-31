@@ -67,7 +67,7 @@
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
                 android:textColor="@color/white"
-                android:textColorHint="@color/secondary_color"
+                android:textColorHint="@color/white"
                 android:textSize="16sp" />
 
             <TextView
@@ -93,7 +93,7 @@
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
                 android:textColor="@color/white"
-                android:textColorHint="@color/secondary_color"
+                android:textColorHint="@color/white"
                 android:textSize="16sp" />
 
             <TextView
