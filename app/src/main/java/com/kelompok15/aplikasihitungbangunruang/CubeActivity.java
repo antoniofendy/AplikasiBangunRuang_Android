@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,7 +24,7 @@ public class CubeActivity extends AppCompatActivity
         setContentView(R.layout.activity_cube);
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        etEdgeInput = findViewById(R.id.edittext_vertex);
+        etEdgeInput = findViewById(R.id.edittext_edge);
         tvSurfaceResult = findViewById(R.id.textview_surface_result);
         tvVolumeResult = findViewById(R.id.textview_volume_result);
 
@@ -46,9 +45,9 @@ public class CubeActivity extends AppCompatActivity
 
             if(etEdgeInput.length() != 0)
             {
-                double vertex = Double.parseDouble(String.valueOf(etEdgeInput.getText()));
-                double surface = 6 * (Math.pow(vertex, 2));
-                double volume = Math.pow(vertex, 3);
+                double edge = Double.parseDouble(String.valueOf(etEdgeInput.getText()));
+                double surface = 6 * (Math.pow(edge, 2));
+                double volume = Math.pow(edge, 3);
 
                 tvSurfaceResult.setText(String.valueOf(surface));
                 tvVolumeResult.setText(String.valueOf(volume));

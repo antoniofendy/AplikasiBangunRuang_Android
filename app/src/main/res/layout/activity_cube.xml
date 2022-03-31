@@ -44,24 +44,24 @@
                 android:src="@drawable/img_cube" />
 
             <TextView
-                android:id="@+id/textview_vertex"
+                android:id="@+id/textview_edge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="8dp"
-                android:text="@string/calculator_cube_vertex_title"
+                android:text="@string/calculator_cube_edge_title"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/edittext_vertex"
+                android:id="@+id/edittext_edge"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:background="@drawable/custom_edittext"
                 android:drawableTint="@color/white"
                 android:ems="10"
-                android:hint="@string/calculator_cube_vertex_input"
+                android:hint="@string/calculator_cube_edge_input"
                 android:inputType="numberDecimal"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"

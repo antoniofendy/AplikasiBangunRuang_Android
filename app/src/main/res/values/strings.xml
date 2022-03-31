@@ -29,8 +29,8 @@
     <string name="calculator_result_surface">Luas permukaan</string>
     <string name="calculator_result_volume">Volume</string>
 
-    <string name="calculator_cube_vertex_title">Sisi (a)</string>
-    <string name="calculator_cube_vertex_input">Nilai sisi</string>
+    <string name="calculator_cube_edge_title">Sisi (a)</string>
+    <string name="calculator_cube_edge_input">Nilai sisi</string>
 
     <string name="calculator_cone_radius_title">Jari-jari (r)</string>
     <string name="calculator_cone_radius_input">Nilai jari-jari</string>
