@@ -164,7 +164,8 @@
                         android:text="-"
                         android:textAlignment="textEnd"
                         android:textColor="@color/dark_grey"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        tools:ignore="RtlCompat" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -173,7 +174,8 @@
                 android:id="@+id/card_result_container"
                 style="@style/CustomCardView"
                 android:layout_width="match_parent"
-                android:layout_height="48dp">
+                android:layout_height="48dp"
+                tools:ignore="DuplicateIds">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -200,7 +202,8 @@
                         android:text="-"
                         android:textAlignment="textEnd"
                         android:textColor="@color/dark_grey"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        tools:ignore="RtlCompat" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
