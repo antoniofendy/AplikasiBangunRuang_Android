@@ -49,25 +49,11 @@ public class DBController extends SQLiteOpenHelper
                 "SELECT * FROM users WHERE username = ? AND password = ?", new String[]{user.getUsername(), user.getPassword()}
         );
 
-        if(cursor != null && cursor.moveToFirst() && cursor.getCount() > 0)
-        {
+        if (cursor != null && cursor.moveToFirst() && cursor.getCount() > 0) {
             User result = new User(cursor.getInt(0), cursor.getString(1), cursor.getString(2));
             return result;
         }
 
         return null;
     }
-
-//    public boolean checkUsernameAvailability(String username)
-//    {
-//        @SuppressLint("Recycle") Cursor cursor = this.getReadableDatabase().rawQuery(
-//                "SELECT * FROM users WHERE username = ?", new String[]{username}
-//        );
-//
-//        if(cursor != null && cursor.moveToFirst() && cursor.getCount() > 0)
-//        {
-//            return true;
-//        }
-//        return false;
-//    }
 }
